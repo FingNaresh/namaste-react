@@ -1,0 +1,29 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Pinnacle Boy",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FingNaresh/namaste-react.git"
+  },
+  "keywords": [],
+  "author": "Pinnacle Boy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FingNaresh/namaste-react/issues"
+  },
+  "homepage": "https://github.com/FingNaresh/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserlist":[
+    "last 2  versions"
+  ]
+}
