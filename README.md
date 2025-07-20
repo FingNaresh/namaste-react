@@ -18,3 +18,13 @@
 -HTTPs
 -Tree Shaking - remove unused code
 - Different dev and production bundles
+
+
+-two types of Export/Import
+
+export default Component
+import Component from "path";
+
+-Named Export/Import
+ export const Component;
+ import {Component} from "path";
