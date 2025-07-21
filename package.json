@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is Namaste React by Pinnacle Boy",
   "scripts": {
-    "start":"parcel index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },
@@ -23,9 +23,11 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^6.30.1",
+    "react-router-dom": "^6.30.1"
   },
-  "browserlist":[
+  "browserlist": [
     "last 2  versions"
   ]
 }
