@@ -1,53 +1,32 @@
 import React from 'react';
 
 class UserClass extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state={
-            userInfo:{
-            name:"Dummy",
-            loaction:"Default",
-        },
+    this.state = {
+      userInfo: {
+        name: props.name || "Dummy",
+        location: props.location || "Default",
+        contact: props.contact || "pinnacleboy@gmail.com",
+      },
     };
+  }
 
-     }
-    
-
-    async componentDidMount() {
-        // console.log("UserClass component mounted");
-        // Api call
-        const data = await fetch("https://api.github.com/users/FingNaresh");
-        const json =await  data.json();
-
-        this.setState({
-            userInfo:json,
-        });
-        // console.log(json);
-        
-    }
-
-    componentDidUpdate(){
-        // console.log("Component Did update")
-    }
-
-    componentWillUnmount(){
-        // console.log("Component will Unmount")
-    }
-
-    
-
-  
   render() {
-    const {name, location, avatar_url} = this.state.userInfo;
+    const { name, location, contact } = this.state.userInfo;
 
     return (
-      // Your JSX goes here
-      <div className='user-card'>
-        <img src={avatar_url}/>
-      <h2>Name: {name}</h2>
-      <h3>Location: {location}</h3>
-      <h4>Contact:pinncacleboy@gmail.com</h4>
+      <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center text-center space-y-3 hover:shadow-2xl transition-shadow duration-300">
+        <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center text-green-700 text-3xl font-bold">
+          {name.charAt(0)}
+        </div>
+        <h2 className="text-xl font-bold text-green-700">{name}</h2>
+        <h3 className="text-gray-600">Location: {location}</h3>
+        <h4 className="text-gray-600">Contact: {contact}</h4>
+        <button className="mt-3 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">
+          Contact
+        </button>
       </div>
     );
   }
